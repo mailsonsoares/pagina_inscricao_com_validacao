@@ -1,0 +1,57 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    background-color: hsl(0, 100%, 74%);
+    background-image: url('images/bg-intro-desktop.png');
+
+}
+
+
+.main-text{
+    border: 1px solid black; 
+    width: 40%;
+    margin: 1em;
+    padding: .5em;
+    display: block;
+}
+
+.trial-button{
+    border: 1px solid black; 
+    text-align: center;
+    width: 40%;
+    margin: 1em;
+    padding: .5em;
+    display: block;
+    /* background-color: hsl(249, 10%, 26%) ; */
+}
+
+.button-try{
+    background-color: hsl(248, 32%, 49%)
+}
+
+.button-claim{
+    background-color: hsl(154, 59%, 51%);
+}
+
+.signup-form{
+    border: 1px solid black; 
+    text-align: center;
+    width: 40%;
+    margin: 1em;
+    padding: .5em;
+    display: block;
+    
+}
+
+input{
+    display: block;
+    margin: 1em auto;
+}
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+    
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
