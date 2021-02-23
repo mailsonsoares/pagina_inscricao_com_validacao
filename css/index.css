@@ -2,26 +2,25 @@ body{
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
     background-color: hsl(0, 100%, 74%);
-    background-image: url('./images/bg-intro-desktop.png');
-    color: #FFFFFF;  
-     
+    background-image: url('../images/bg-intro-desktop.png');
+    color: #FFFFFF;      
+    height: 100%;     
 }
 
 .container{   
-    width: auto;
-    margin: 5% auto;
+    margin: 2em auto;
     display: flex;         /*adiciona a propriedade flexbox na tag pai 
                              dos elementos a serem posicionados*/
 
     align-items: center;   /*propriedade flexbox para centralizar items 
                              dentro da tag pai*/
        
-    justify-content: space-around; /*propriedade flexbox*/    
+    justify-content: center; /*space-around propriedade flexbox     */
 }
 
-.main-text{    
-    margin: 0 0 0 7em;
+.main-text{
     width: 40%;    
+    flex-shrink: 1;
 }
 
 .main-text .title-text{ 
@@ -35,8 +34,8 @@ body{
 
 .signup-form{    
     text-align: center;
-    margin: 0 7em 0 0;
     width: 40%;
+    flex-shrink: 1;
 }
 
 .title-try{
@@ -47,13 +46,12 @@ body{
     margin: 1em auto;
     padding: .5em 0;
     box-shadow: rgba(0, 0, 0, 0.3) 0 10px ;   
-    width: 100%;
+    width: 90%;
 }
 
 
 .title-try p strong{    
     font-weight: bold;  
-      
 }
 
 
@@ -66,7 +64,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    width: 90%;
 }
 
 #form-try input{
@@ -75,8 +73,10 @@ body{
     border-radius: 5px 5px 5px 5px;    
     margin: 1em auto;
     padding: 0 20px;
-    border: 1px solid hsl(240, 8%, 77%);    
+    border: 1px solid hsl(240, 8%, 77%); 
+      
 }
+
 
 #form-try input:hover{        
     border: 1px solid #000000;  
@@ -85,6 +85,7 @@ body{
 
 #button-claim{    
     background-color: hsl(154, 59%, 51%);
+    border-radius: 5px 5px 5px 5px;
     height: 50px; 
     width: 85%;       
     border: none;
@@ -93,10 +94,10 @@ body{
     font-weight: bold;     
 }
 
-#button-claim:hover{    
-    background-color: hsl(154, 80%, 33%); 
+#button-claim:hover{       
+    box-shadow: rgba(17, 151, 93, 0.8) 0 5px ;
     border: none;       
-    transform: scale(1.05);    
+    transform: scale(1.02);    
     cursor: pointer; 
 }
 
@@ -115,17 +116,15 @@ body{
 }
 
 footer{
-    /* border-top: 1px solid black; */
-    margin-top: 10em;
+    margin-top: auto;
     
 }
 
-@media screen and (max-width: 450px) {
 
-    body{
-        
-        background-image: url('./images/bg-intro-mobile.png');
-         
+@media screen and (max-width: 750px) {
+
+    body{        
+        background-image: url('../images/bg-intro-mobile.png');         
     }
 
 	.container {
@@ -149,7 +148,6 @@ footer{
     
     .main-text p{    
         margin: 0;  
-        /* font-size: 17px;     */
     }
 
     .signup-form{    
@@ -159,23 +157,36 @@ footer{
         padding: 0;
     }
 
+    #form-try{
+        /* flex-flow: 1; */
+        width: 98%;
+    }
+
     .title-try{
         font-weight: lighter;
         background-color: hsl(248, 32%, 49%);
         border-radius: 8px 8px 8px 8px;        
         margin-top: 4em;
-        padding: 1em 4em;
+        padding: 2em 4em;
         box-shadow: rgba(0, 0, 0, 0.3) 0 10px ;   
+        width: 98%;
+        height: 100px;
     }
 
     .title-try p{
         margin: auto;  
+        width: 100%;
     }
 
   
-    input{
+    #form-try input{
 		
-		width: 90%;
+		width: 95%;
+	}
+
+    #button-claim {
+		
+		width: 95%;
 	}
 
     .attribution { 
