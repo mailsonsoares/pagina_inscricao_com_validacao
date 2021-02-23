@@ -6,27 +6,27 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="./reset.css">
+  <link rel="stylesheet" href="./normalize.css">
+  <link rel="stylesheet" href="./index.css">
   <title>Frontend Mentor | Intro component with sign up form</title>
-
-  
 </head>
+
 <body>
 
   <main>
     <div class="container">
       <div class="main-text">
-        <h1>Learn to code by<br>watching others</h1>
-        
-          <p>See how experimented developers solve problems in realtime.</p>
-          <p>Watching scripted tutorials is great, but understanding how</p>
-          <p>developers think is invaluable.</p>
-        
+        <h1 class="title-text">Learn to code by<br>
+        watching others</h1>
+        <p>See how experimented developers solve problems in realtime.<br>
+           Watching scripted tutorials is great, but understanding how <br>
+           developers think is invaluable.</p>
       </div>    
 
       <div class="signup-form">
         <div class="title-try">
-          <p>Try it free 7 days then $20/mo. thereafter</p>
+          <p><strong>Try it free 7 days</strong> then $20/mo. thereafter</p>
         </div>
         
         
@@ -35,7 +35,8 @@
           <input type="text" placeholder="Last Name">
           <input type="email" placeholder="Email Adress">
           <input type="password" placeholder="Password">
-          <input type="submit" id="button-claim" value="Claim your free trial">
+          <button id="button-claim">Claim your free trial</button>
+          <!-- <input type="submit" id="button-claim" value="Claim your free trial"> -->
           <p class="attribution">             
             By clicking the button, you are agreeing to our <a href="#">Terms and Services</a>.
           </p>
