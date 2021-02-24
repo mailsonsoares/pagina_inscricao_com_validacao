@@ -30,12 +30,12 @@
         </div>
         
         
-        <form id="form-try"action="">
-          <input type="text" placeholder="First Name">
-          <input type="text" placeholder="Last Name">
-          <input type="email" placeholder="Email Adress">
-          <input id="password" type="password" placeholder="Password">
-          <button id="button-claim">Claim your free trial</button>
+        <form id="form-try"action="" data-claim-form>
+          <input type="text" placeholder="First Name" id="nome"  data-claim-input-nome >
+          <input type="text" placeholder="Last Name" data-claim-input>
+          <input type="email" placeholder="Email Adress" data-claim-input>
+          <input id="password" type="password" placeholder="Password" data-claim-input>
+          <button id="button-claim" data-claim-button>Claim your free trial</button>
           <!-- <input type="submit" id="button-claim" value="Claim your free trial"> -->
           <p class="attribution">             
             By clicking the button, you are agreeing to our <a href="#">Terms and Services</a>.
@@ -52,5 +52,8 @@
       Coded by <a href="https://github.com/mailsonsoares/pagina_inscicao_com_validacao">Mailson Soares</a>.
     </p>
   </footer>
+
+  <script src="./js/validacao.js"></script>
 </body>
+
 </html>

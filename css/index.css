@@ -79,9 +79,10 @@ body{
 
 
 #form-try input:hover{        
-    border: 1px solid #000000;  
+    border: .5px solid #696969;  
     cursor: pointer;   
 }
+
 
 #button-claim{    
     background-color: hsl(154, 59%, 51%);
@@ -99,6 +100,10 @@ body{
     border: none;       
     transform: scale(1.02);    
     cursor: pointer; 
+}
+
+#button-claim:active{       
+    border: none;      
 }
 
 
