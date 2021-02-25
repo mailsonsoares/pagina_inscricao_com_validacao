@@ -1,36 +1,12 @@
-const newUser = document.querySelector('[data-claim-button]');
 
-newUser.addEventListener('click', (eventoDoClick) => {    
-    // eventoDoClick.preventDefault();
-    const formNewUser = document.querySelector('[data-claim-input-nome]');  //input nome  
+function valida(input){ // função que recebe os inputs e checa no objeto o tipo de input
+                               //para chamar a function de validação adequada ao input
 
-    mensagemValida(formNewUser); //chama a function que devolve mensagem caso campo esteja vazio! 
+    console.log('---- 2 function valida in validacao.js ----')
+    const tipoDeInput = input.dataset.tipo //usa o 'dataset' para receber o data-attribut do input
 
-})   
+   
 
-function mensagemValida(input){
-
-    const dadosRecebidos = input.value;    
-
-    let mensagem = ''        
-
-    if (!validaCamposNaoVazios(dadosRecebidos)){//Chama a function que valida os campos não vazios
-                                               //se voltar 'false', mensagem recebe 'O campo não pode estar vazio!'
-        mensagem = 'O campo não pode estar vazio!'
-    }
-
-    console.log(input.id, mensagem);
-
-    input.setCustomValidity(mensagem); //atribui à propriedade setCustomValidity, do input, a mensagem.
 }
 
-function validaCamposNaoVazios(dados){
-
-    if (!dados){        
-        return false; //se for vazio retorna 'false'.
-    }else{
-        return true;
-    }
-    
-}
-
+export default valida
