@@ -1,6 +1,6 @@
 body{
     font-family: 'Poppins', sans-serif;
-    font-size: 16px;
+    font-size: 1em;
     background-color: hsl(0, 100%, 74%);
     background-image: url('../images/bg-intro-desktop.png');
     color: #FFFFFF;      
@@ -15,23 +15,28 @@ body{
     align-items: center;   /*propriedade flexbox para centralizar items 
                              dentro da tag pai*/
        
-    justify-content: center; /*space-around propriedade flexbox     */
+    justify-content: center; /* space-around propriedade flexbox  */  
+    
 }
 
 .main-text{
+    /* padding-top: 3em; */
     width: 40%;
 }
 
 .main-text .title-text{ 
-    font-size: 3.5em;    
+    font-size: 3.5em;
+    font-weight: bold;   
 }
 
 .main-text p{    
     margin: 0;  
-    font-size: 17px;    
+    font-size: 1.2em;
+    max-width: 50ch;    
 }
 
-.signup-form{    
+.signup-form{
+    padding-top: 3em;    
     text-align: center;
     width: 40%;
 }
@@ -54,7 +59,7 @@ body{
 
 
 #form-try{
-    margin: 2em auto;
+    margin: 1em auto;
     padding: 2em .5em;
     border-radius: 8px 8px 8px 8px;
     background-color: #FFFFFF;

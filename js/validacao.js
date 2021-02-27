@@ -1,17 +1,20 @@
 
-export function valida(input){ // função que recebe os inputs
- 
+function valida(input){ // função que recebe os inputs
+     
     const dataTipo = input.dataset.tipo //usa o 'dataset' para receber o data-attribut do input    
     
-    if(input.validity.valid){//propriedade valid do input. Se estiver 'false' está vazio.
+    if(input.validity.valid){//propriedade valid do input. Se estiver 'true' tem conteúdo, senão está vazio.
+    
         input.parentElement.classList.remove('input-container--invalido'); //remove a classe css
         input.parentElement.querySelector('.input-mensagem-erro').innerHTML = ''; //add vazio ao conteúdo da tag span
+                
     }else{
         
         input.parentElement.classList.add('input-container--invalido'); //add a classe css ao elemento pai do input
         input.parentElement.querySelector('.input-mensagem-erro').innerHTML = mostraMensagemDeErro(dataTipo, input); //add a mensagem ao conteúdo da tag span
+       
     }
-
+    
 }
 
 //objeto que contém um vetor com os tipos de erro do atributo validity
@@ -57,5 +60,5 @@ function mostraMensagemDeErro(dataTipo, input){
 
     return mensagem;
 }
+export { valida };
 
-//export default valida
