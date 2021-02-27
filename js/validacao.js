@@ -1,5 +1,5 @@
 
-function valida(input){ // função que recebe os inputs
+export function valida(input){ // função que recebe os inputs
  
     const dataTipo = input.dataset.tipo //usa o 'dataset' para receber o data-attribut do input    
     
@@ -7,8 +7,8 @@ function valida(input){ // função que recebe os inputs
         input.parentElement.classList.remove('input-container--invalido'); //remove a classe css
         input.parentElement.querySelector('.input-mensagem-erro').innerHTML = ''; //add vazio ao conteúdo da tag span
     }else{
-        console.log(input.validity);
-        input.parentElement.classList.add('input-container--invalido'); //add a classe css
+        
+        input.parentElement.classList.add('input-container--invalido'); //add a classe css ao elemento pai do input
         input.parentElement.querySelector('.input-mensagem-erro').innerHTML = mostraMensagemDeErro(dataTipo, input); //add a mensagem ao conteúdo da tag span
     }
 
@@ -16,11 +16,10 @@ function valida(input){ // função que recebe os inputs
 
 //objeto que contém um vetor com os tipos de erro do atributo validity
 const tipoDeErro = [
-    'valueMissing',
-    'typeMismatch'
-    // 'patternMismatch',
-    // 'customError',
+    'typeMismatch',
+    'valueMissing'    
 ]
+
 
 //objeto que contém as mensagens para cada tipo de erro de cada data-attribute do form
 const mensagemDeErro ={
@@ -32,9 +31,9 @@ const mensagemDeErro ={
         valueMissing: 'Last Name cannot be empty'
     },
 
-    email: {
-        valueMissing: 'Email cannot be empty.',
-        typeMismatch: 'Look like this is not an email'
+    email: {        
+        typeMismatch: 'Look like this is not an email',
+        valueMissing: 'Email cannot be empty.'
     },
 
     password: {
@@ -51,7 +50,7 @@ function mostraMensagemDeErro(dataTipo, input){
                                  // do objeto 'tipoDeErro'...
                                  
             mensagem = mensagemDeErro[dataTipo][erro]; //... passa ao objeto 'mensagemDeErro' o dataTipo e o erro, 
-                                                       //para receber a mensagem.
+                                                       //para receber a mensagem correta.
         }
         
     });
@@ -59,4 +58,4 @@ function mostraMensagemDeErro(dataTipo, input){
     return mensagem;
 }
 
-export default valida
+//export default valida
