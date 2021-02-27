@@ -3,7 +3,7 @@ import { valida } from './validacao.js'
 const newSignUp = document.querySelector('[data-tipo-button]'); 
 
 newSignUp.addEventListener('click', (eventoDoClick) => {    
-    //eventoDoClick.preventDefault();    
+    eventoDoClick.preventDefault();    
 
     const todosInputs = document.querySelectorAll('input'); //pega todos os inputs  
     
@@ -14,13 +14,4 @@ newSignUp.addEventListener('click', (eventoDoClick) => {
     })
 
 })   
-
-// const inputs = document.querySelectorAll('input');
-
-// inputs.forEach(input => {
-//     input.addEventListener('blur', (evento) => {
-//         evento.preventDefault(); 
-//         valida(evento.target);
-//     })
-// })
 
