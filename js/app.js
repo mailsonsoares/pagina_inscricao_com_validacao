@@ -19,7 +19,7 @@ newSignUp.addEventListener('click', (eventoDoClick) => {
     })
 
  
-    checaValorDosInputs(arrInputs); // chama function para checar se todos os valids
+    checaValorDosInputs(arrInputs); // chama function para checar se todos os 'valid', dos inputs,
                                     // tem valores iguais 
 
     function checaValorDosInputs(array) {
